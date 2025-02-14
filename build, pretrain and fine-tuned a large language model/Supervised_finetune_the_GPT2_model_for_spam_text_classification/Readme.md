@@ -7,7 +7,7 @@
 - split the dataset to train, validate, test dataset
 - organize the datasets into a pytorch Dataset class instances
   1. use the GPT2 tokenizer to encode the texts to lists of integers encoded_ids
-  2. truncate and pad the encoded_ids to be of the same length within the context size(1024)of GPT2
+  2. truncate and pad the encoded_ids with 50256 (the id for <|endoftext|> token of GPT2 tokenizer)such that they are of the same length and are within the token context size(1024)of GPT2
   3. take the encode_ids to be features of the Dataset
   4. map the labels 'spam', 'ham' to 1 and 0 and take them to be labels of the Dataset
 - organize the Dataset class instances into pytorch DataLoader instances
