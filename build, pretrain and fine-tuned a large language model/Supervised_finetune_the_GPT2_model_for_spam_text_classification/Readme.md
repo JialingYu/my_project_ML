@@ -1,5 +1,7 @@
 # Supervised Fine-tune the GPT2 Model to be a Text Spam Classifier
 
+** Steps:
+
 - download a dataset contains text messages with label 'spam' and 'ham'(not spam').
 - balance the dataset; sample equal number of spam and ham texts from the dataset
 - split the dataset to train, validate, test dataset
@@ -18,7 +20,7 @@
 - evaluate the model loss and classification accuracy on the validation and test dataset seperated from the original dataset
 - define new text messages and use the fine-tuned model to classify newly defined texts
 
-Conclusion:
+** Conclusion:
 
 The final model has high accuracy in the test set seperated from the original dataset used for fine-tuning. But on the dataset we define ourselves, the classification result is satisfactory to some extent but not robust; i.e., even slightly modify the contents of the text message will change the classification result.
   
